@@ -2,6 +2,10 @@
 from slurmcli import cli
 
 
-if __name__ == '__main__':
+def main():
     # TODO: print exception
     cli.root()
+
+
+if __name__ == '__main__':
+    main()

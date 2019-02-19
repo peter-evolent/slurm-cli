@@ -14,7 +14,7 @@ $ pip install git+https://github.com/peter-evolent/slurm-cli.git
 Then, verify the installation
 
 ```sh
-$ slurmcli version
+$ slurm version
 0.0.1
 ```
 

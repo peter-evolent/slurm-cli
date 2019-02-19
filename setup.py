@@ -23,4 +23,9 @@ setup(
     python_requires='>=3.6',
     packages=find_packages(),
     install_requires=requires,
+    entry_points={
+        'console_scripts': [
+            'slurm = slurmcli.__main__:main',
+        ],
+    },
 )

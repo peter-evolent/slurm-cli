@@ -1,8 +1,11 @@
 from setuptools import setup, find_packages
 
 
-requires = []
-
+requires = [
+    'click>=7.0',
+    'texttable',
+    'slurmsdk@git+https://github.com/peter-evolent/slurm-sdk.git@v0.0.1'
+]
 
 def get_version():
     with open('slurmcli/version.py') as f:

@@ -8,7 +8,7 @@ It requires Python 3.6 or higher.
 
 First, install the library:
 ```sh
-$ pip install https://github.com/peter-evolent/slurm-cli.git
+$ pip install git+https://github.com/peter-evolent/slurm-cli.git
 ```
 
 Then, verify the installation

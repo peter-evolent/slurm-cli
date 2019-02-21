@@ -264,3 +264,14 @@ def test_jobs_retry(monkeypatch, clictx):
     print_error(result)
     assert result.exit_code == 0
     assert result.output == '11\n'
+
+
+def test_jobs_delete(monkeypatch, clictx):
+    monkeypatch.setattr(cli.API, 'delete_job', handle_action)
+
+    runner = CliRunner()
+    result = runner.invoke(cli.delete, '11', obj=clictx)
+
+    print_error(result)
+    assert result.exit_code == 0
+    assert result.output == '11\n'

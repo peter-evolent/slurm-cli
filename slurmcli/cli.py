@@ -98,9 +98,17 @@ def resume(ctx, job_id):
     click.echo(job_id)
 
 
-@root.command(short_help='Retry a job')
+@root.command(short_help='Change the job status to queued')
 @click.argument('job_id', type=int)
 @click.pass_obj
 def retry(ctx, job_id):
     ctx.api.retry_job(job_id)
+    click.echo(job_id)
+
+
+@root.command(short_help='Delete a job')
+@click.argument('job_id', type=int)
+@click.pass_obj
+def delete(ctx, job_id):
+    ctx.api.delete_job(job_id)
     click.echo(job_id)
